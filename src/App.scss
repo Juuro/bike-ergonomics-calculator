@@ -1,4 +1,6 @@
 .d-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  max-width: 300px;
+  margin: 0 auto;
 }
