@@ -1,0 +1,52 @@
+.measurement {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  padding: 0 1rem;
+
+  &:nth-of-type(2n) {
+    background-color: red;
+  }
+
+  $index: 11;
+  @while $index > 0 {
+    &:nth-of-type(#{$index}) {
+      background-color: hsla(310+4.2*$index, 100%, 50%, 1);
+    }
+
+    $index: $index - 1;
+  }
+
+  .label,
+  .input-field,
+  .unit {
+    vertical-align: middle;
+  }
+
+  .label {
+    display: inline-block;
+    min-width: 20rem;
+  }
+
+  .input-field {
+    background-color: hsla(0, 100%, 100%, .1);
+    border: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    height: 4rem;
+    margin-right: .1rem;
+    outline: 0;
+    text-align: center;
+    transition: background-color .3s ease-in;
+    width: 6rem;
+
+    &:focus {
+      caret-color: hsla(60, 100%, 50%, 1);
+    }
+
+    &:valid {
+      background-color: transparent;
+    }
+  }
+}
