@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Measurement from './measurement';
+import BikeFitValues from './bike-fit-values';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Measurement />, div);
+  ReactDOM.render(<BikeFitValues />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

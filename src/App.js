@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.scss';
-import Measurement from './components/measurement/measurement'
+
+import Measurement from './components/measurement/measurement';
+import BikeFitValues from './components/bike-fit-values/bike-fit-values';
 
 export default class App extends Component {
   render() {
@@ -26,7 +28,7 @@ export default class App extends Component {
           </form>
 
           <div className="bike-fit-values">
-            Values
+            <BikeFitValues />
           </div>
         </main>
 
