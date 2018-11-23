@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './App.scss';
 
 import Measurement from './components/measurement/measurement';
 import BikeFitValues from './components/bike-fit-values/bike-fit-values';
+
+import './App.scss';
 
 export default class App extends Component {
   state = {
