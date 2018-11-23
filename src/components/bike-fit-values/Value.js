@@ -3,11 +3,19 @@ import React, { Component } from 'react';
 //import './value.scss';
 
 export default class Value extends Component {
+
+  getContent = () => {
+    let value = this.props.calculateValue();
+    if (this.props.round) {
+      value = Math.round(value);
+    }
+    if (value !== 0 && value !== null) {
+      return <div className="value">{this.props.label}: {value}{this.props.unit}</div>
+    }
+    return null;
+  }
+
   render() {
-    return (
-      <div className="value">
-        {this.props.label}: {this.props.calculateValue()}
-      </div>
-    );
+    return (this.getContent());
   }
 }
