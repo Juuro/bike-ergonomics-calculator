@@ -5,10 +5,6 @@ import Value from './Value';
 import './bike-fit-values.scss';
 
 export default class BikeFitValues extends Component {
-  componentDidUpdate = () => {
-    console.log("componentDidUpdate", this.props.measurements);
-  }
-
   calculateSaddleHeight = () => {
     return this.props.measurements.insideLegLength * .89;
   }
