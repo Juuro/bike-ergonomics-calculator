@@ -4,7 +4,7 @@ import './measurement.scss';
 
 export default class Measurement extends Component {
   handleChange = event => {
-    console.log("Bonkers:", event.target.value);
+    this.props.onMeasurementChange(event.target.name, event.target.value);
   }
 
   render() {

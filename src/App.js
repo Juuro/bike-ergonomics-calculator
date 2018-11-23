@@ -5,6 +5,27 @@ import Measurement from './components/measurement/measurement';
 import BikeFitValues from './components/bike-fit-values/bike-fit-values';
 
 export default class App extends Component {
+  state = {
+    measurements: {
+      height: null,
+      insideLegLength: null,
+      beadSeatWidth: null,
+      torsoLength: null,
+      armsLength: null,
+      chestCircumference: null,
+      waistCircumference: null,
+      hipCircumference: null,
+      handCircumference: null,
+      headCircumference: null,
+      sitBonesDistance: null
+    }
+  }
+
+  handleMeasurementChange = (name, measurement) => {
+    this.setState({measurements: {...this.state.measurements, [name]: measurement}});
+    console.log(this.state);
+  }
+
   render() {
     return (
       <div className="app">
@@ -14,21 +35,21 @@ export default class App extends Component {
 
         <main className="grid">
           <form>
-            <Measurement label="Größe" name="height" />
-            <Measurement label="Schrittlänge" name="inside-leg" />
-            <Measurement label="Schulterbreite" name="bead-seat-width" />
-            <Measurement label="Rumpflänge" name="torso-length" />
-            <Measurement label="Armlänge" name="arms-length" />
-            <Measurement label="Brustumfang" name="chest-circumference" />
-            <Measurement label="Taillenumfang" name="waist-circumference" />
-            <Measurement label="Hüftumfang" name="hip-circumference" />
-            <Measurement label="Handumfang" name="hand-circumference" />
-            <Measurement label="Kopfumfang" name="head-circumference" />
-            <Measurement label="Sitzknochenabstand" name="sit-bones-distance" />
+            <Measurement label="Größe" name="height" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Schrittlänge" name="insideLegLength" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Schulterbreite" name="beadSeatWidth" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Rumpflänge" name="torsoLength" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Armlänge" name="armsLength" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Brustumfang" name="chestCircumference" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Taillenumfang" name="waistCircumference" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Hüftumfang" name="hipCircumference" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Handumfang" name="handCircumference" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Kopfumfang" name="headCircumference" onMeasurementChange={this.handleMeasurementChange} />
+            <Measurement label="Sitzknochenabstand" name="sitBonesDistance" onMeasurementChange={this.handleMeasurementChange} />
           </form>
 
           <div className="bike-fit-values">
-            <BikeFitValues />
+            <BikeFitValues measurements={this.state.measurements} />
           </div>
         </main>
 
