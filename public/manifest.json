@@ -3,8 +3,8 @@
   "short_name": "bkergnmcsclc",
   "theme_color": "#f321de",
   "background_color": "#787878",
-  "display": "browser",
-  "Scope": "/",
+  "display": "standalone",
+  "scope": "/",
   "start_url": "/",
   "icons": [
     {

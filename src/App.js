@@ -33,7 +33,7 @@ export default class App extends Component {
 
           <h1>
             <span className="logo">
-              <i class="material-icons">directions_bike</i>
+              <i className="material-icons">directions_bike</i>
             </span>
             The Bike Ergonomics Calculator
           </h1>
@@ -53,7 +53,7 @@ export default class App extends Component {
         </main>
 
         <footer>
-          &copy; Sebastian Engel {(new Date()).getFullYear()}
+          &copy; Sebastian Engel {(new Date()).getFullYear()} &middot; <span id="a2hs">A2HS</span>
         </footer>
       </div>
     );
