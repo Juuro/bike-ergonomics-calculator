@@ -1,0 +1,25 @@
+@import '../../assets/styles/variables';
+
+.bike-fit-values {
+    grid-column: 2;
+    grid-row: 1 / -1;
+
+
+    .value {
+      padding: 0 1rem;
+      line-height: 4rem;
+      vertical-align: middle;
+      color: $white;
+      font-size: 2em;
+      font-weight: 600;
+
+      $index: 10;
+      @while $index > 0 {
+        &:nth-of-type(#{$index}) {
+          background-color: hsla(340+4.2*$index, 100%, 50%, 1);
+        }
+
+        $index: $index - 1;
+      }
+    }
+}

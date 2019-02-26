@@ -1,13 +1,11 @@
+@import '../../assets/styles/variables';
+
 .measurement {
-  color: #fff;
-  font-size: 2rem;
+  color: $white;
+  font-size: 2em;
   font-weight: 600;
   letter-spacing: .3px;
   padding: 0 1rem;
-
-  &:nth-of-type(2n) {
-    background-color: red;
-  }
 
   $index: 11;
   @while $index > 0 {
