@@ -36,7 +36,7 @@ export default class BikeFitValues extends Component {
       <>
         <Value label="Sattelhöhe" calculateValue={this.calculateSaddleHeight} round={true} unit={"cm"} />
         <Value label="Sattel-Lenker-Abstand" calculateValue={this.calculateSaddleBarDistance} round={true} unit={"cm"} />
-        <Value label="Höhendifferenz Sattel/Lenker" calculateValue={this.calculateHeightDifference} round={true} unit={"cm"} />
+        <Value label="Sattel/Lenker-Differenz" calculateValue={this.calculateHeightDifference} round={true} unit={"cm"} />
         <Value label="Winkel Bremshebel" calculateValue={this.calculateAngleBrakeLever} round={true} unit="°" />
         <Value label="Sattelbreite" calculateValue={this.calculateSaddleWidth} round={true} unit="cm" />
       </>

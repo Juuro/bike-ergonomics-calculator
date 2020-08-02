@@ -36,7 +36,7 @@ export default class App extends Component {
         </header>
 
         <main className="grid">
-          <form>
+          <form className="measurements">
             <Measurement label="Schrittlänge" name="insideLegLength" onMeasurementChange={this.handleMeasurementChange} />
             <Measurement label="Rumpflänge" name="torsoLength" onMeasurementChange={this.handleMeasurementChange} />
             <Measurement label="Armlänge" name="armsLength" onMeasurementChange={this.handleMeasurementChange} />
