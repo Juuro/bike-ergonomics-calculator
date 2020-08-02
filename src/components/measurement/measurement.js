@@ -11,7 +11,7 @@ export default class Measurement extends Component {
     return (
       <div className="measurement">
         <label className="label" htmlFor={this.props.name}>{this.props.label}</label>
-        <input className="input-field" id={this.props.name} type="number" name={this.props.name} min="1" max="300" required onChange={this.handleChange} />
+        <input className="input-field" id={this.props.name} type="number" required name={this.props.name} min="1" max="300" onChange={this.handleChange} />
         <span className="unit">cm</span>
       </div>
     );
