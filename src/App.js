@@ -30,11 +30,7 @@ export default class App extends Component {
     return (
       <div className="app">
         <header>
-
           <h1>
-            <span className="logo">
-              <i className="material-icons">directions_bike</i>
-            </span>
             The Bike Ergonomics Calculator
           </h1>
         </header>
