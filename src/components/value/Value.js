@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-//import './value.scss';
-
 export default class Value extends Component {
 
   getContent = () => {
@@ -10,7 +8,7 @@ export default class Value extends Component {
       value = Math.round(value);
     }
     if (value !== 0 && value !== null) {
-      return <div className="value">{this.props.label}: <span className="value-number">{value}</span> {this.props.unit}</div>
+      return <div className="value">{this.props.label}: <span className="value-number">{ value || ' '}</span> {this.props.unit}</div>
     }
     return null;
   }
