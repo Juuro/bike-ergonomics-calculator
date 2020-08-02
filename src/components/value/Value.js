@@ -1,23 +1,24 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Value extends Component {
-  getContent = () => {
-    let value = this.props.calculateValue()
-    if (this.props.round) {
+const Value = props => {
+  const getContent = () => {
+    let value = props.calculateValue()
+    if (props.round) {
       value = Math.round(value)
     }
     if (value !== 0 && value !== null) {
       return (
         <div className="value">
-          {this.props.label}:{' '}
-          <span className="value-number">{value || ' '}</span> {this.props.unit}
+          {props.label}:{' '}
+          <span className="value-number">{value || ' '}</span> {props.unit}
         </div>
       )
     }
     return null
   }
 
-  render() {
-    return this.getContent()
-  }
+  
+  return getContent()
 }
+
+export default Value
