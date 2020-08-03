@@ -12,10 +12,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src --ext .js --cache"
   },
   "browserslist": [
     ">0.2%",
@@ -25,5 +23,8 @@
   ],
   "engines": {
     "node": "13.x"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.20.5"
   }
 }

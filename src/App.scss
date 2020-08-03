@@ -52,5 +52,19 @@
 
   .bike-fit-values {
     background-color: $red;
+
+    .value {
+      padding: 0 1rem;
+      line-height: 4rem;
+      vertical-align: middle;
+      color: $white;
+      font-size: 1rem;
+      font-weight: 600;
+    
+      .value-number {
+        font-size: 3rem;
+        vertical-align: middle;
+      }
+    }
   }
 }
