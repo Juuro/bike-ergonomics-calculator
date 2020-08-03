@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Measurement from './components/measurement/measurement'
-import Value from './components/value/Value'
+import Value from './components/value/value'
 
 import './App.scss'
 
