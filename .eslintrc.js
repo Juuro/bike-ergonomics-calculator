@@ -1,7 +1,9 @@
 module.exports = {
     'env': {
         'browser': true,
-        'es6': true
+        'es6': true,
+        'jest': true,
+        'node': true
     },
     'extends': 'eslint:recommended',
     'globals': {
@@ -40,5 +42,7 @@ module.exports = {
             'as-needed',
             { 'requireReturnForObjectLiteral': true }
         ],
+        'react/jsx-uses-react': 'error',   
+        'react/jsx-uses-vars': 'error' 
     }
 }
