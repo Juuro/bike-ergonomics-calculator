@@ -11,7 +11,7 @@ jobs:
         uses: kamranayub/wait-for-netlify-action@v2.0.3
         id: wait-for-netflify-preview
         with:
-          site_name: "naughty-euclid-aa5edb"
+          site_name: "happy-villani-3bb632"
           max_timeout: 300
         env:
           NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
