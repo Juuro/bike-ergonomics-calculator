@@ -1,0 +1,31 @@
+name: Lighthouse Check
+on: [pull_request]
+
+jobs:
+  lighthouse-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - run: mkdir /tmp/artifacts
+      - name: Waiting for Netlify Preview
+        uses: kamranayub/wait-for-netlify-action@v2.0.3
+        id: wait-for-netflify-preview
+        with:
+          site_name: "happy-villani-3bb632"
+          max_timeout: 300
+        env:
+          NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
+      - name: Run Lighthouse
+        uses: foo-software/lighthouse-check-action@master
+        with:
+          accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          author: ${{ github.actor }}
+          branch: ${{ github.ref }}
+          outputDirectory: /tmp/artifacts
+          urls: ${{ steps.wait-for-netflify-preview.outputs.url }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@main
+        with:
+          name: Lighthouse reports
+          path: /tmp/artifacts
+
