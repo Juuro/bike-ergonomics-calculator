@@ -28,6 +28,3 @@ jobs:
         with:
           name: Lighthouse reports
           path: /tmp/artifacts
-          
-          
-          
