@@ -2,8 +2,8 @@ import React from 'react'
 
 import './measurement.scss'
 
-const Measurement = (props) => {
-  const handleChange = (event) => {
+const Measurement = props => {
+  const handleChange = event => {
     props.onMeasurementChange(event.target.value)
   }
 
