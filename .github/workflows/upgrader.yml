@@ -24,3 +24,10 @@ jobs:
         node-version: '13'
     - name: Yarn Upgrader
       uses: browniebroke/yarn-upgrade-action@v1
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v2
+      with:
+        token: ${{ secrets.GH_ACCESS_TOKEN }}
+        branch: update/yarn-upgrade
+        title: Run yarn upgrade
+        commit-message: "chore(deps): Run yarn upgrade"
