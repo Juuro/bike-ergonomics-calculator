@@ -18,7 +18,7 @@ jobs:
       - name: Run Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
-          accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          accessToken: ${{ secrets.GH_ACCESS_TOKEN }}
           author: ${{ github.actor }}
           branch: ${{ github.ref }}
           outputDirectory: /tmp/artifacts
